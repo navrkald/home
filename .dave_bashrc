@@ -1,0 +1,96 @@
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	source /etc/bashrc
+fi
+
+#############################
+# Aliasses exports and functions
+#############################
+#
+# WORK
+#
+alias X='sudo mount -t cifs -o user=nd000009 //brqb010a.global-ad.net/Share01 /media/X'
+alias nd000009='ct setview nd000009_ubuntu_makefiles'
+alias gitsip='checkBuilds git_sip -c -r 0-1'
+alias ct="cleartool"
+alias co="checkout"
+alias tree="ct lsvtree -g"
+alias bashrcApplyChanges="source ~/.bashrc"
+alias cdtesting="cd /vobs/Opera_Testing"
+alias ci="checkin"
+alias unco="uncheckout"
+alias pwv="cleartool pwv"
+function exportgit(){ export | grep "PATH\|VOBROOT";}
+#because of propper running xclearcase
+if [ "Ubuntu" = `lsb_release -is` ]; then
+	export LC_ALL=C ;
+fi
+#
+# General aliases and function
+#
+# Colorized terminal
+LS_COLORS="no=00:fi=00:di=94:ln=00;36:pi=40;33:so=00;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=00;32:*.cmd=00;32:*.exe=00;32:*.com=00;32:*.btm=00;32:*.bat=00;32:*.sh=00;32:*.csh=00;32:*.tar=00;31:*.tgz=00;31:*.arj=00;31:*.taz=00;31:*.lzh=00;31:*.zip=00;31:*.z=00;31:*.Z=00;31:*.gz=00;31:*.bz2=00;31:*.bz=00;31:*.tz=00;31:*.rpm=00;31:*.cpio=00;31:*.jpg=00;35:*.gif=00;35:*.bmp=00;35:*.xbm=00;35:*.xpm=00;35:*.png=00;35:*.tif=00;35:"
+export LS_COLORS #change dir ls to light blue
+alias less='less --RAW-CONTROL-CHARS'
+export TERM=xterm-color
+export LS_OPTS='--color=auto -h'
+export GREP_OPTIONS='--color=always' ## Colorize the grep command output for ease of use (good for log files)##
+alias grep='grep ${GREP_OPTIONS}'
+alias egrep='egrep ${GREP_OPTIONS}'
+alias fgrep='fgrep ${GREP_OPTIONS}'
+alias mygitclean='git reset --hard; git clean -fdx'
+alias mkdir='mkdir -pv' #automaticali create parent dir
+# Use a long listing format
+alias df='df -H' #human readable with real recounting (1000 is not 1024!
+alias wcl='wc -l'
+aliasls='ls -h'
+alias ll='ls -la'
+alias mount='mount |column -t' #Make mount command output pretty and human readable format
+alias l.='ls -d .* --color=auto' # Show hidden files
+function psgrep(){ ps aux | grep $(echo $1 | sed "s/^\(.\)/[\1]/g");}
+alias wget='wget -c'
+alias ls='ls ${LS_OPTS}'
+alias l='ls'
+alias la='ls -al'
+alias lt='ls -tlia'
+alias du='du -h'
+alias dus='du -s'
+function findwc(){ find . | wc -l;}
+export WINEDITOR=/usr/bin/gedit
+HISTSIZE=10000 #size of history
+#
+# User specific aliases and functions
+#
+alias krokodyl='vlc http://icecast4.play.cz:80/krokodyl128.mp3 &'
+alias bbc1='vlc http://www.bbc.co.uk/radio1/wm_asx/aod/radio1.asx &'
+
+
+######################
+# PROMPT
+#####################
+PROMPT_COMMAND="source $HOME/scripts/.prompt.sh"
+
+###################
+# PATH
+##################
+export PATH=/homes/nd000009/bin:/homes/nd000009/cc2git/bin:/homes/nd000009/byobu/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/homes/nd000009/bin:/opt/rational/clearcase/bin/:/viewstore/:/homes/nd000009/clearcase/:.
+unset SSH_ASKPASS
+
+#####################
+# Locale
+######################
+export LC_CTYPE="en_US.UTF-8"
+LC_NUMERIC="en_US.UTF-8"
+LC_TIME="en_US.UTF-8"
+LC_COLLATE="en_US.UTF-8"
+LC_MONETARY="en_US.UTF-8"
+LC_MESSAGES="en_US.UTF-8"
+LC_PAPER="en_US.UTF-8"
+LC_NAME="en_US.UTF-8"
+LC_ADDRESS="en_US.UTF-8"
+LC_TELEPHONE="en_US.UTF-8"
+LC_MEASUREMENT="en_US.UTF-8"
+LC_IDENTIFICATION="en_US.UTF-8"
+#export MANPAGER="less -j4" #set search in man pages case insensitive
+#export LESS="-ij4"  #search in less and man case insensitive and swho context 4 lines above searched results
+
