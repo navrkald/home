@@ -46,6 +46,7 @@ alias wcl='wc -l'
 aliasls='ls -h'
 alias ll='ls -la'
 alias mount='mount |column -t' #Make mount command output pretty and human readable format
+alias mountdaveserver='sudo mount -t cifs //192.168.1.144/data /media/davidServer/ -o username=david,noexec'
 alias l.='ls -d .* --color=auto' # Show hidden files
 function psgrep(){ ps aux | grep $(echo $1 | sed "s/^\(.\)/[\1]/g");}
 alias wget='wget -c'
@@ -61,8 +62,8 @@ HISTSIZE=10000 #size of history
 #
 # User specific aliases and functions
 #
-alias krokodyl='vlc http://icecast4.play.cz:80/krokodyl128.mp3 &'
-alias bbc1='vlc http://bbc.co.uk/radio/listen/live/r1.asx &'
+alias krokodyl='vlc http://icecast4.play.cz:80/krokodyl128.mp3 --qt-start-minimized &'
+alias bbc1='vlc http://bbc.co.uk/radio/listen/live/r1.asx --qt-start-minimized &'
 
 ######################
 # PROMPT
