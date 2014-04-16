@@ -25,6 +25,11 @@ function exportgit(){ export | grep "PATH\|VOBROOT";}
 if [ "Ubuntu" = `lsb_release -is` ]; then
 	export LC_ALL=C ;
 fi
+
+if [ "czbrqh023x" = `hostname` ];then
+	cd /store2/viewstore/opera_v2r1_hfa_snapshot.vws/
+fi
+
 #
 # General aliases and function
 #
@@ -57,7 +62,7 @@ alias lt='ls -tlia'
 alias du='du -h'
 alias dus='du -s'
 function findwc(){ find . | wc -l;}
-export WINEDITOR=/usr/bin/gedit
+export WINEDITOR=/usr/bin/vim
 HISTSIZE=10000 #size of history
 #
 # User specific aliases and functions
