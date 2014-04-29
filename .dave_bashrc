@@ -39,7 +39,7 @@ export LS_COLORS #change dir ls to light blue
 alias less='less --RAW-CONTROL-CHARS'
 export TERM=xterm-color
 export LS_OPTS='--color=auto -h'
-export GREP_OPTIONS='--color=always' ## Colorize the grep command output for ease of use (good for log files)##
+export GREP_OPTIONS='--color=auto' ## Colorize the grep command output for ease of use (good for log files)##
 alias grep='grep ${GREP_OPTIONS}'
 alias egrep='egrep ${GREP_OPTIONS}'
 alias fgrep='fgrep ${GREP_OPTIONS}'
