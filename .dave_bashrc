@@ -9,12 +9,14 @@ fi
 #
 # WORK
 #
+alias setvobroot='export VOBROOR=`pwd`'
 alias X='sudo mount -t cifs -o user=nd000009 //brqb010a.global-ad.net/Share01 /media/X'
 alias nd000009='ct setview nd000009_ubuntu_makefiles'
 alias gitsip='checkBuilds git_sip -c -r 0-1'
 alias ct="cleartool"
 alias co="checkout"
 alias tree="ct lsvtree -g"
+alias cm="cm-tool"
 alias bashrcApplyChanges="source ~/.bashrc"
 alias cdtesting="cd /vobs/Opera_Testing"
 alias ci="checkin"
@@ -24,10 +26,6 @@ function exportgit(){ export | grep "PATH\|VOBROOT";}
 #because of propper running xclearcase
 if [ "Ubuntu" = `lsb_release -is` ]; then
 	export LC_ALL=C ;
-fi
-
-if [ "czbrqh023x" = `hostname` ];then
-	cd /store2/viewstore/opera_v2r1_hfa_snapshot.vws/
 fi
 
 #
@@ -69,6 +67,7 @@ HISTSIZE=10000 #size of history
 #
 alias krokodyl='vlc http://icecast4.play.cz:80/krokodyl128.mp3 --qt-start-minimized &'
 alias bbc1='vlc http://bbc.co.uk/radio/listen/live/r1.asx --qt-start-minimized &'
+export EDITOR=/usr/bin/vim
 
 ######################
 # PROMPT
@@ -78,7 +77,7 @@ PROMPT_COMMAND="source $HOME/scripts/.prompt.sh"
 ###################
 # PATH
 ##################
-export PATH=/homes/nd000009/bin:/homes/nd000009/cc2git/bin:/homes/nd000009/byobu/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/homes/nd000009/bin:/opt/rational/clearcase/bin/:/viewstore/:/homes/nd000009/clearcase/:.
+export PATH=/homes/nd000009/bin:/homes/nd000009/cc2git/bin:/homes/nd000009/byobu/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/homes/nd000009/bin:/opt/rational/clearcase/bin/:/viewstore/:/homes/nd000009/clearcase/:.:/usr/sbin/
 unset SSH_ASKPASS
 
 #####################
