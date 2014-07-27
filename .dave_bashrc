@@ -78,7 +78,7 @@ PROMPT_COMMAND="source $HOME/scripts/.prompt.sh"
 ###################
 # PATH
 ##################
-export PATH=/homes/nd000009/bin:/homes/nd000009/cc2git/bin:/homes/nd000009/byobu/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/homes/nd000009/bin:/opt/rational/clearcase/bin/:/viewstore/:/homes/nd000009/clearcase/:.
+export PATH=/homes/nd000009/bin:/homes/nd000009/cc2git/bin:/homes/nd000009/byobu/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/homes/nd000009/bin:/opt/rational/clearcase/bin/:/viewstore/:/homes/nd000009/clearcase/:.:/sbin
 unset SSH_ASKPASS
 
 #####################
@@ -99,3 +99,9 @@ LC_IDENTIFICATION="en_US.UTF-8"
 #export MANPAGER="less -j4" #set search in man pages case insensitive
 #export LESS="-ij4"  #search in less and man case insensitive and swho context 4 lines above searched results
 
+
+#################
+# HOME DAVID UBUNTU
+##############
+
+alias bakalarka='cd /home/david/Documents/Bakalarka/regularConvertor'
