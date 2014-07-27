@@ -9,12 +9,14 @@ fi
 #
 # WORK
 #
+alias setvobroot='export VOBROOR=`pwd`'
 alias X='sudo mount -t cifs -o user=nd000009 //brqb010a.global-ad.net/Share01 /media/X'
 alias nd000009='ct setview nd000009_ubuntu_makefiles'
 alias gitsip='checkBuilds git_sip -c -r 0-1'
 alias ct="cleartool"
 alias co="checkout"
 alias tree="ct lsvtree -g"
+alias cm="cm-tool"
 alias bashrcApplyChanges="source ~/.bashrc"
 alias cdtesting="cd /vobs/Opera_Testing"
 alias ci="checkin"
@@ -27,7 +29,7 @@ if [ "Ubuntu" = `lsb_release -is` ]; then
 fi
 
 if [ "czbrqh023x" = `hostname` ];then
-	cd /store2/viewstore/opera_v2r1_hfa_snapshot.vws/
+	cd /store2
 fi
 
 #
@@ -39,7 +41,7 @@ export LS_COLORS #change dir ls to light blue
 alias less='less --RAW-CONTROL-CHARS'
 export TERM=xterm-color
 export LS_OPTS='--color=auto -h'
-export GREP_OPTIONS='--color=always' ## Colorize the grep command output for ease of use (good for log files)##
+export GREP_OPTIONS='--color=auto' ## Colorize the grep command output for ease of use (good for log files)##
 alias grep='grep ${GREP_OPTIONS}'
 alias egrep='egrep ${GREP_OPTIONS}'
 alias fgrep='fgrep ${GREP_OPTIONS}'
@@ -69,6 +71,7 @@ HISTSIZE=10000 #size of history
 #
 alias krokodyl='vlc http://icecast4.play.cz:80/krokodyl128.mp3 --qt-start-minimized &'
 alias bbc1='vlc http://bbc.co.uk/radio/listen/live/r1.asx --qt-start-minimized &'
+export EDITOR=/usr/bin/vim
 
 ######################
 # PROMPT
@@ -78,7 +81,7 @@ PROMPT_COMMAND="source $HOME/scripts/.prompt.sh"
 ###################
 # PATH
 ##################
-export PATH=/homes/nd000009/bin:/homes/nd000009/cc2git/bin:/homes/nd000009/byobu/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/homes/nd000009/bin:/opt/rational/clearcase/bin/:/viewstore/:/homes/nd000009/clearcase/:.:/sbin
+export PATH=/homes/nd000009/bin:/homes/nd000009/cc2git/bin:/homes/nd000009/byobu/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/homes/nd000009/bin:/opt/rational/clearcase/bin/:/viewstore/:/homes/nd000009/clearcase/:.:/usr/sbin:/sbin
 unset SSH_ASKPASS
 
 #####################
@@ -99,9 +102,3 @@ LC_IDENTIFICATION="en_US.UTF-8"
 #export MANPAGER="less -j4" #set search in man pages case insensitive
 #export LESS="-ij4"  #search in less and man case insensitive and swho context 4 lines above searched results
 
-
-#################
-# HOME DAVID UBUNTU
-##############
-
-alias bakalarka='cd /home/david/Documents/Bakalarka/regularConvertor'
