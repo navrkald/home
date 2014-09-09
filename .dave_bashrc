@@ -23,6 +23,7 @@ alias ci="checkin"
 alias unco="uncheckout"
 alias pwv="cleartool pwv"
 function exportgit(){ export | grep "PATH\|VOBROOT";}
+alias mountpi='sudo mount -t cifs //192.168.1.145/Devices /media/pi -o user=pi'
 #because of propper running xclearcase
 if [ "Ubuntu" = `lsb_release -is` ]; then
 	export LC_ALL=C ;
