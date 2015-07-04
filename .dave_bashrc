@@ -4,6 +4,26 @@ if [ -f /etc/bashrc ]; then
 fi
 
 #############################
+# Locale
+##############################
+export LANG="cs_CZ.UTF-8"
+export LANGUAGE="cs_CZ.UTF-8"
+export LC_CTYPE="cs_CZ.UTF-8"
+export LC_NUMERIC="cs_CZ.UTF-8"
+export LC_TIME="cs_CZ.UTF-8"
+export LC_COLLATE="cs_CZ.UTF-8"
+export LC_MONETARY="cs_CZ.UTF-8"
+export LC_MESSAGES="cs_CZ.UTF-8"
+export LC_PAPER="cs_CZ.UTF-8"
+export LC_NAME="cs_CZ.UTF-8"
+export LC_ADDRESS="cs_CZ.UTF-8"
+export LC_TELEPHONE="cs_CZ.UTF-8"
+export LC_MEASUREMENT="cs_CZ.UTF-8"
+export LC_IDENTIFICATION="cs_CZ.UTF-8"
+export LC_ALL="cs_CZ.UTF-8"
+
+
+#############################
 # Aliasses exports and functions
 #############################
 #
@@ -25,13 +45,15 @@ alias pwv="cleartool pwv"
 function exportgit(){ export | grep "PATH\|VOBROOT";}
 alias mountpi='sudo mount -t cifs //192.168.1.145/Devices /media/pi -o user=pi'
 #because of propper running xclearcase
-if [ "Ubuntu" = `lsb_release -is` ]; then
-	export LC_ALL=C ;
-fi
+#if [ "Ubuntu" = `lsb_release -is` ]; then
+#	export LC_ALL=C ;
+#fi
 
 if [ "czbrqh023x" = `hostname` ];then
 	cd /store2
 fi
+
+alias cdtorrent='cd ~/Dropbox/CZTorrent/'
 
 #
 # General aliases and function
@@ -71,7 +93,8 @@ HISTSIZE=10000 #size of history
 # User specific aliases and functions
 #
 alias krokodyl='vlc http://icecast4.play.cz:80/krokodyl128.mp3 --qt-start-minimized &'
-alias bbc1='vlc http://bbc.co.uk/radio/listen/live/r1.asx --qt-start-minimized &'
+alias bbc1='vlc http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1_mf_p --qt-start-minimized &'
+alias youtube-dl-mp3='youtube-dl --extract-audio --audio-format mp3'
 export EDITOR=/usr/bin/vim
 
 ######################
@@ -82,7 +105,7 @@ PROMPT_COMMAND="source $HOME/scripts/.prompt.sh"
 ###################
 # PATH
 ##################
-export PATH=/homes/nd000009/bin:/homes/nd000009/cc2git/bin:/homes/nd000009/byobu/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/homes/nd000009/bin:/opt/rational/clearcase/bin/:/viewstore/:/homes/nd000009/clearcase/:.:/usr/sbin:/sbin
+export PATH=/homes/nd000009/bin:/homes/nd000009/cc2git/bin:/homes/nd000009/byobu/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/homes/nd000009/bin:/opt/rational/clearcase/bin/:/viewstore/:/homes/nd000009/clearcase/:.:/usr/sbin:/sbin:/usr/local/sbin
 unset SSH_ASKPASS
 
 #####################
