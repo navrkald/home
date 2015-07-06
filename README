@@ -1,19 +1,23 @@
-This are my scripts and configuration files. 
-You can edit options by yourself.
+Here are my scripts and configuration files. 
+Free edit them by yourself, the most of them are commented.
 
 Instruciton:
 
-0) Download it by:
-   git clone https://github.com/navrkald/home.git
-1) Change dir to downloaded dir
-   cd home
+0) Change dir to your home
+	cd ~
 
-2) # Make deploy script executable
-   chmod +x deploy.sh
+1) Download it by:
+	git clone https://github.com/navrkald/home.git
 
-3) # Run deploy script
-./deploy
+2) Change dir to downloaded dir
+	cd home
 
-4) To aplly changes immediatelly run:
-. ~/.bashrc
+3) # Make deploy script executable
+	chmod +x deploy.sh
+
+4) # Run deploy script
+	./deploy
+
+5) To aplly changes immediatelly run:
+	. ~/.bashrc
 

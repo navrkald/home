@@ -9,8 +9,8 @@ find . -maxdepth 1 -type d ! -name '.' -exec mv {} .. \;
 find . -maxdepth 1 -type f ! -wholename "$0" -exec mv {} .. \;
 
 # Append .davebashrc to .bashrc
-echo "\n" >> ../.bashrc
-echo "if [ -e ../.dave_bashrc ]; then " >> ../.bashrc
+echo -e "\n" >> ../.bashrc
+echo "if [ -e .dave_bashrc ]; then " >> ../.bashrc
 echo "  . .dave_bashrc" >> ../.bashrc
 echo "fi" >> ../.bashrc
 
