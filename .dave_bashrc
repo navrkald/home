@@ -96,7 +96,7 @@ HISTSIZE=10000 #size of history
 #
 alias krokodyl='vlc http://icecast4.play.cz:80/krokodyl128.mp3 --qt-start-minimized &'
 alias bbc1='vlc http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1_mf_p --qt-start-minimized &'
-alias youtube-dl-mp3='youtube-dl --extract-audio --audio-format mp3'
+alias youtube-dl-mp3='`which youtube-dl` --extract-audio --audio-format mp3'
 export EDITOR=/usr/bin/vim
 
 ######################
