@@ -99,6 +99,7 @@ alias bbc1='vlc http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1_mf_p --qt-st
 alias youtube-dl-mp3='`which youtube-dl` --extract-audio --audio-format mp3'
 export VISUAL=vim
 export EDITOR="$VISUAL"
+export GIT_EDITOR="$VISUAL"
 
 ######################
 # PROMPT
