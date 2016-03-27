@@ -109,7 +109,7 @@ PROMPT_COMMAND="source $HOME/scripts/.prompt.sh"
 ###################
 # PATH
 ##################
-export PATH=/homes/nd000009/bin:/homes/nd000009/cc2git/bin:/homes/nd000009/byobu/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/homes/nd000009/bin:/opt/rational/clearcase/bin/:/viewstore/:/homes/nd000009/clearcase/:.:/usr/sbin:/sbin:/usr/local/sbin
+export PATH=/homes/nd000009/bin:/homes/nd000009/cc2git/bin:/homes/nd000009/byobu/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/homes/nd000009/bin:/opt/rational/clearcase/bin/:/viewstore/:/homes/nd000009/clearcase/:.:/usr/sbin:/sbin:/usr/local/sbin:~/scripts
 unset SSH_ASKPASS
 
 #####################
