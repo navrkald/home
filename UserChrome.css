@@ -1,0 +1,59 @@
+#tabbrowser-tabs .tabbrowser-arrowscrollbox,
+#tabbrowser-tabs .arrowscrollbox-scrollbox {
+    display: block;
+}
+
+.scrollbutton-up,
+.arrowscrollbox-overflow-start-indicator,
+.scrollbutton-down,
+.arrowscrollbox-overflow-end-indicator {
+    display: none !important;
+}
+
+#tabbrowser-tabs .arrowscrollbox-scrollbox .scrollbox-innerbox {
+    display: flex;
+    flex-wrap: wrap;
+    /*
+    display: block;
+    */
+    overflow-y: auto !important;
+    min-height: var(--tab-min-height); /* default */
+    max-height: calc(5*var(--tab-min-height)) !important;
+}
+#tabbrowser-tabs .tabbrowser-tab:not([pinned]) {
+    flex-grow: 1;
+    flex-wrap:wrap;
+    min-width: 150px;
+    vertical-align: bottom !important;
+}
+#tabbrowser-tabs .tabbrowser-tab,
+#tabbrowser-tabs .tabbrowser-tab .tab-stack .tab-background {
+    height: var(--tab-min-height);
+}
+
+#tabbrowser-tabs .tabbrowser-tab .tab-stack {
+    width: 100%;
+}
+
+#titlebar-buttonbox {
+    display: block !important;
+    vertical-align: top !important;
+}
+
+#main-window[tabsintitlebar] #tabbrowser-tabs {
+    -moz-window-dragging: no-drag;   
+}
+/* Show Tab Close buttons only when hovered */
+#tabbrowser-tabs > .tabbrowser-tab:not([pinned="true"]) > .tab-stack > .tab-content > .tab-close-button {
+  visibility: collapse !important;
+  opacity: 0 !important;
+  transition: all 250ms ease-in-out !important;
+}
+#tabbrowser-tabs > .tabbrowser-tab:not([pinned="true"]):hover > .tab-stack > .tab-content > .tab-close-button {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: all 250ms ease-in-out !important;;
+}
+#tabbrowser-tabs > .tabbrowser-tab:not([pinned="true"]) > .tab-stack > .tab-content > .tab-close-button {
+  display: -moz-box !important;
+}
