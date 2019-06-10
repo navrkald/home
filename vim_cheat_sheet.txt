@@ -1,0 +1,4 @@
+:all						Show all documents
+:qa							Close all documents
+ctrl+ww						Switch to next documents
+
