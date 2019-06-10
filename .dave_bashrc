@@ -91,6 +91,23 @@ alias dus='du -s'
 function findwc(){ find . | wc -l;}
 export WINEDITOR=/usr/bin/vim
 HISTSIZE=10000 #size of history
+# Show tree of git branches in terminal
+alias gittree='git log --graph --all --decorate'
+# Grep scring recursivelly in current dir excluding binary and git files and print line numbers in search results
+function gr(){
+  grep --color=auto --exclude-dir=".git" -RnI "$@" 2>/dev/null
+}
+
+# Same as function gr() but searches case insensitive
+function gri(){
+  grep --color=auto --exclude-dir=".git" -RniI "$@" 2>/dev/null
+}
+
+# This function will delete all local branches which had been deleted on remote and had been merged.
+# To fetch deleted branches on remote please run: git fetch -p
+function deleteLocalMergedBranches(){
+  git branch -vv | grep ': gone]'|  grep -v "\*" | awk '{ print $1; }' | xargs -r git branch -d
+}
 #
 # User specific aliases and functions
 #
