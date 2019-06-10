@@ -1,3 +1,6 @@
-# Bash
+# Bash shortcuts
 ctrl + k - delete from cursor to end of line
 ctrl + u - delete from cursor to beginning of line
+
+# cmd utilities
+watch - run program infinitely every 2 sec.
