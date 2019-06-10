@@ -4,3 +4,6 @@ ctrl + u - delete from cursor to beginning of line
 
 # cmd utilities
 watch - run program infinitely every 2 sec.
+
+# Atom shortcuts
+ctrl + t - quick open file
