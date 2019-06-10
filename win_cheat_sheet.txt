@@ -1,0 +1,1 @@
+win+r -> "shell:startup"						Add program to startup
