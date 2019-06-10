@@ -1,0 +1,25 @@
+readlink -f <Filename>							Prints full path of file
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Misc
+
+[ʃɪˈbæŋ]										Pronouciation on SheBang(#!)
+
+
+# Tar gitignores in current dir
+git status --porcelain --ignored . | cut -f2 -d ' ' | xargs basename -a |  tar cfz /tmp/np255/foo.tgz -T -
+
+
+Try to log in to remote LDAP server to check credentials:
+ldapsearch -LLL -x -h oapnradnet-ldap.deutsche-boerse.de -D "CN=RTSMGR,OU=TecAcc,OU=Sync,OU=Accounts,DC=oa,DC=pnrad,DC=net" -W -b "OU=Accounts,DC=oa,DC=pnrad,DC=net" "(cn=rtsmgr)"
