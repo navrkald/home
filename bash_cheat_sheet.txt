@@ -1,17 +1,5 @@
 readlink -f <Filename>							Prints full path of file
 
-
-
-
-
-
-
-
-
-
-
-
-
 # Misc
 
 [ʃɪˈbæŋ]										Pronouciation on SheBang(#!)
